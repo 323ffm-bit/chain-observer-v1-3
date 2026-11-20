@@ -1,0 +1,21 @@
+Chain Observer v1.3 — post-review hardened build
+
+Command:
+    python -m unittest -v
+
+Result:
+    31 tests passed
+
+Coverage includes the original v1.3 tests and regression tests for:
+- Boolean flips under non-zero numeric tolerance
+- Invalid rule configuration rejected before state mutation
+- Omitted/empty rules remaining UNDETERMINED
+- Deep-copy isolation for nested caller-owned data
+- Blocking silent [R] promotion after REVIEW_REQUIRED
+- Explicit, auditable review override
+- NaN preservation policy
+- Invalid and non-finite tolerances
+- Malformed rule modes, comparators, and rule structures
+
+Python requirement: 3.9+
+Dependencies: Python standard library only
